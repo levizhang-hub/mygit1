@@ -55,6 +55,8 @@ git reset --hard HEAD@{0}
 checkout回到从前（针对单个文件）
 git checkout id -- 1.py
 
+
+分支
 git branch dev
 git branch
 git checkout dev
@@ -63,6 +65,9 @@ git checkout dev
 git checkout master
 git branch -d dev
 
+已经在管理库中了，add和commit可以合并为一下
+git commit -am "change "
+
 
 建立分支
 git checkout -b dev
@@ -70,6 +75,25 @@ git checkout -b dev
 把dev推送到master上
 git merge --no-ff -m "keep merge info" dev  
 
+
+merge分支冲突
+
+rebase分支冲突
+以前的版本就不存在了
+git rebase dev 主分支机遇Dev而修改，不在任何一个分支上，只在rebase空间上
+git rebase --continue
+
+临时修改stash
+git stash   放在缓存区
+git checkout -b boss
+
+
+
+git checkout dev
+删除分支
+git branch -D boss
+返回修改
+git tsash pop
 
 
 
